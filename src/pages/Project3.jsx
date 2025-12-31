@@ -22,20 +22,19 @@ const Project3 = ({ darkMode }) => {
     }
   }, [currentIndex, thumbOffset]);
 
-  const projectData = {
-    title: "Precision Mechanical Turntable Disc",
-    category: "3D GENERATIVE DESIGN (PYTHON)",
-    description: "Model piringan mekanis presisi tinggi yang dibangun secara prosedural menggunakan Blender Python API. Proyek ini mendemonstrasikan otomatisasi geometri kompleks melalui script, termasuk manajemen boolean untuk lubang baut, ring penguat, dan chamfer miring yang dalam.",
-    specs: [
-      { label: "Main Disc Diameter", value: "115 mm" },
-      { label: "Disc Thickness", value: "3.0 mm" },
-      { label: "Center Hole Diameter", value: "27 mm" },
-      { label: "Inner Bolt Pattern", value: "4x @ Radius 28mm" },
-      { label: "Outer Bolt Pattern", value: "4x @ Radius 53.5mm" },
-      { label: "Reinforcement Ring", value: "⌀33mm - 37mm" },
-      { label: "Automation Script", value: "Blender bpy API" }
-    ]
-  };
+const projectData = {
+title: "Procedural Tweeter Mounting Plate",
+  category: "Acoustic Design & Loudspeaker Engineering  ",
+  description: "Perancangan dudukan (faceplate) tweeter menggunakan pemrograman Python di Blender (bpy). Geometri plat dibuat secara otomatis (generative design) mencakup lubang baut, ring penguat, dan chamfer miring untuk optimalisasi dispersi suara tweeter.",
+  specs: [
+    { label: "Design Method", value: "Procedural Python Scripting (Blender)" },
+    { label: "Primary Material", value: "3D Printed PLA+ / Aluminum" },
+    { label: "Main Function", value: "Acoustic Tweeter Faceplate" },
+    { label: "Compatibility", value: "1\" Silk Dome Tweeter Unit" },
+    { label: "Acoustic Feature", value: "Deep Angled Chamfer for Dispersion" },
+    { label: "Dimensions", value: "115mm Outer Diameter" }
+  ]
+};
 
   const colors = {
     bg: darkMode ? '#0f172a' : '#f4f7fa',
@@ -130,7 +129,7 @@ const Project3 = ({ darkMode }) => {
           
           <div style={{ ...cardStyle, backgroundColor: colors.card, borderColor: colors.border }}>
             <h3 style={{ margin: '0 0 20px 0', fontSize: '18px', fontWeight: '700', color: colors.textMain }}>
-              Deskripsi Teknik
+              Deskripsi Projek
             </h3>
             <p style={{ color: colors.textSub, lineHeight: '1.8', fontSize: '15px', margin: 0 }}>
               {projectData.description}

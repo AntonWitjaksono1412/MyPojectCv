@@ -8,51 +8,11 @@ import foto3 from '../assets/Project1/foto3.jpg';
 import foto4 from '../assets/Project1/foto4.jpg';
 import foto5 from '../assets/Project1/foto5.jpg';
 import foto6 from '../assets/Project1/foto6.jpg';
-import foto7 from '../assets/Project1/foto7.jpg';
-import foto8 from '../assets/Project1/foto8.jpg';
-import foto9 from '../assets/Project1/foto9.jpg';
-import foto10 from '../assets/Project1/foto10.jpg';
-import foto11 from '../assets/Project1/foto11.jpg';
-import foto12 from '../assets/Project1/foto12.jpg';
-import foto13 from '../assets/Project1/foto13.jpg';
-import foto14 from '../assets/Project1/foto14.jpg';
-import foto15 from '../assets/Project1/foto15.jpg';
-import foto16 from '../assets/Project1/foto16.jpg';
-import foto17 from '../assets/Project1/foto17.jpg';
-import foto18 from '../assets/Project1/foto18.jpg';
-import foto19 from '../assets/Project1/foto19.jpg';
-import foto20 from '../assets/Project1/foto20.jpg';
-import foto21 from '../assets/Project1/foto21.jpg';
-import foto22 from '../assets/Project1/foto22.jpg';
-import foto23 from '../assets/Project1/foto23.jpg';
-import foto24 from '../assets/Project1/foto24.jpg';
-import foto25 from '../assets/Project1/foto25.jpg';
-import foto26 from '../assets/Project1/foto26.jpg';
-import foto27 from '../assets/Project1/foto27.jpg';
-import foto28 from '../assets/Project1/foto28.jpg';
-import foto29 from '../assets/Project1/foto29.jpg';
-import foto30 from '../assets/Project1/foto30.jpg';
-import foto31 from '../assets/Project1/foto31.jpg';
-import foto32 from '../assets/Project1/foto32.jpg';
-import foto33 from '../assets/Project1/foto33.jpg';
-import foto34 from '../assets/Project1/foto34.jpg';
-import foto35 from '../assets/Project1/foto35.jpg';
-import foto36 from '../assets/Project1/foto36.jpg';
-import foto37 from '../assets/Project1/foto37.jpg';
-import foto38 from '../assets/Project1/foto38.jpg';
-import foto39 from '../assets/Project1/foto39.jpg';
-import foto40 from '../assets/Project1/foto40.jpg';
-import foto41 from '../assets/Project1/foto41.jpg';
-import foto42 from '../assets/Project1/foto42.jpg';
 
 const Project1 = ({ darkMode }) => {
   const navigate = useNavigate();
 const allImages = [
-  foto1, foto2, foto3, foto4, foto5, foto6, foto7, foto8, foto9, foto10,
-  foto11, foto12, foto13, foto14, foto15, foto16, foto17, foto18, foto19, foto20,
-  foto21, foto22, foto23, foto24, foto25, foto26, foto27, foto28, foto29, foto30,
-  foto31, foto32, foto33, foto34, foto35, foto36, foto37, foto38, foto39, foto40,
-  foto41, foto42
+  foto1, foto2, foto3, foto4, foto5, foto6
 ];  const [currentIndex, setCurrentIndex] = useState(0);
 
   const [thumbOffset, setThumbOffset] = useState(0);
@@ -67,18 +27,16 @@ const allImages = [
   }, [currentIndex, thumbOffset]);
 
 const projectData = {
-  title: "Gainclone Integrated Amplifier",
-category: "Audio Engineering · DIY Amplifier",
-  description:
-    "Proyek Gainclone Integrated Amplifier ini terinspirasi dari desain legendaris Kimura-San/47Labs Gaincard yang mengusung konsep less-is-more, dengan jumlah komponen yang minimal dan jalur sinyal yang sangat pendek. Amplifier ini menggunakan sepasang IC Texas Instruments LM3875 dan dirancang sebagai amplifier terintegrasi dengan beberapa input analog serta kontrol volume untuk menghasilkan karakter suara yang bersih, detail, dan musikal.",
+title: "Compact 2-Way Bookshelf Monitor",
+  category: "Acoustic Design & Loudspeaker Engineering",
+  description: "Sistem pengeras suara bookshelf 2-way yang dirancang untuk performa maksimal dalam dimensi ringkas. Memadukan woofer LG 3 inci high-excursion dengan Silk Dome tweeter untuk separasi suara yang jernih. Dilengkapi crossover pasif presisi untuk memastikan transmisi sinyal tanpa hambatan.",
   specs: [
-    { label: "Konsep Amplifier", value: "Gainclone (Inspirasi 47Labs Gaincard)" },
-    { label: "IC Amplifier Utama", value: "Texas Instruments LM3875 (Dual Mono)" },
-    { label: "Konfigurasi Input", value: "3 Input Analog (Dapat Dipilih)" },
-    { label: "Kontrol Volume", value: "TKD CP601 Stereo Attenuator" },
-    { label: "Pemilih Input", value: "Lorlin CK Rotary Switch" },
-    { label: "Material Chassis", value: "Kayu Black Walnut (Sudut Mitre)" },
-    { label: "Heatsink", value: "Heatsink Aluminium Custom Machining" }
+    { label: "Configuration", value: "2-Way Passive System" },
+    { label: "Main Driver", value: "3\" LG High Excursion Woofer" },
+    { label: "High Driver", value: "1\" Silk Dome Tweeter" },
+    { label: "Crossover Network", value: "2-Way Passive Filter" },
+    { label: "Enclosure Material", value: "Custom Wood Enclosure" },
+    { label: "Input Terminal", value: "Gold-Plated Binding Post" }
   ]
 };
 

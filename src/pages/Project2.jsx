@@ -9,10 +9,14 @@ import foto4 from '../assets/Project2/foto4.jpg';
 import foto5 from '../assets/Project2/foto5.jpg';
 import foto6 from '../assets/Project2/foto6.jpg';
 import foto7 from '../assets/Project2/foto7.jpg';
+import foto8 from '../assets/Project2/foto8.jpg';
+import foto9 from '../assets/Project2/foto9.jpg';
+import foto10 from '../assets/Project2/foto10.jpg';
+import foto11 from '../assets/Project2/foto11.jpg';
 
 const Project2 = ({ darkMode }) => {
   const navigate = useNavigate();
-  const allImages = [foto1, foto2, foto3, foto4, foto5, foto6, foto7]; 
+  const allImages = [foto1, foto2, foto3, foto4, foto5, foto6, foto7, foto8, foto9, foto10, foto11]; 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [thumbOffset, setThumbOffset] = useState(0);
   const maxVisible = 6;
@@ -25,20 +29,19 @@ const Project2 = ({ darkMode }) => {
     }
   }, [currentIndex, thumbOffset]);
 
-  const projectData = {
-    title: "Reference Bookshelf Speaker MK-II",
-    category: "LOUDSPEAKER DESIGN",
-    description: "Speaker bookshelf 2-way pasif dengan tuning bass reflex belakang. Dirancang menggunakan kayu MDF 18mm dengan finishing veneer Walnut asli untuk resonansi suara yang natural.",
-    specs: [
-      { label: "Woofer Driver", value: "5.25 Inch Kevlar Cone" },
-      { label: "Tweeter", value: "1 Inch Silk Dome Neodymium" },
-      { label: "Cabinet Type", value: "Rear Ported Bass Reflex" },
-      { label: "Crossover Point", value: "2.5 kHz / 12dB Octave" },
-      { label: "Frequency Resp.", value: "55Hz - 20kHz" },
-      { label: "Dimensions (H x W x D)", value: "320 x 180 x 220 mm" },
-      { label: "Weight", value: "4.5 Kg / unit" }
-    ]
-  };
+const projectData = {
+title: "Reference 3-Way Quad-Driver Tower",
+  category: "Acoustic Design & Loudspeaker Engineering",
+  description: "Speaker menara (floorstanding) 3-way berperforma tinggi dengan konfigurasi 4 driver. Menggunakan dual subwoofer 4.5 inci untuk dentuman bass yang masif, driver mid-range Yamaha 4 inci untuk vokal yang natural, serta Silk Dome tweeter. Kabinet menggunakan MDF 15mm dengan finishing cat prismatik eksklusif.",
+  specs: [
+    { label: "Configuration", value: "3-Way, 4 Driver System" },
+    { label: "Low Driver", value: "Dual 4.5\" High-Excursion Subwoofer" },
+    { label: "Mid Driver", value: "4\" Yamaha Performance Driver" },
+    { label: "High Driver", value: "1\" National Silk Dome Tweeter" },
+    { label: "Cabinet Material", value: "15mm MDF with Prismatic Paint" },
+    { label: "Input Terminal", value: "Gold-Plated Binding Post" }
+  ]
+};
 
   const colors = {
     bg: darkMode ? '#0f172a' : '#f4f7fa',
