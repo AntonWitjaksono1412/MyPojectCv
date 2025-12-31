@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* ================= GLOBAL ================= */
+.project-wrapper {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: #f4f7fa;
+  min-height: 100vh;
+  color: #0f172a;
+}
+
+.project-wrapper.dark {
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+/* ================= CONTAINER ================= */
+.project-inner {
+  padding: 40px;
+  max-width: 1440px;
+  margin: auto;
+}
+
+/* ================= HEADER ================= */
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  margin-bottom: 18px;
+  color: inherit;
+}
+
+.category {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #3b82f6;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 800;
+  margin: 8px 0 36px;
+  line-height: 1.25;
+}
+
+/* ================= GRID ================= */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+/* ================= CARD ================= */
+.card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+}
+
+.project-wrapper.dark .card {
+  background: #1e293b;
+  box-shadow: none;
+}
+
+/* ================= IMAGE ================= */
+.image-container {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+
+.project-wrapper.dark .image-container {
+  background: #020617;
+}
+
+.image-container img {
+  width: 100%;
+  height: 420px;
+  object-fit: contain;
+}
+
+/* ================= ARROW (KOTAK) ================= */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 12px; /* KOTAK TAPI HALUS */
+  
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.95);
+  color: #0f172a;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  transition: 0.25s ease;
+}
+
+.arrow:hover {
+  transform: translateY(-50%) scale(1.05);
+}
+
+.project-wrapper.dark .arrow {
+  background: rgba(30, 41, 59, 0.95);
+  color: #f8fafc;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+
+.arrow.left {
+  left: 14px;
+}
+
+.arrow.right {
+  right: 14px;
+}
+
+/* MOBILE: LEBIH KECIL */
+@media (max-width: 768px) {
+  .arrow {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+  }
+}
+
+
+/* ================= THUMB ================= */
+.thumb-wrapper {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+
+.thumb {
+  width: 80px;
+  height: 60px;
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: 0.45;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: 0.25s ease;
+}
+
+.thumb:hover {
+  opacity: 0.8;
+}
+
+.thumb.active {
+  opacity: 1;
+  border-color: #3b82f6;
+  transform: scale(1.05);
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================= INFO ================= */
+.info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.card p {
+  font-size: 15px;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.project-wrapper.dark .spec-row {
+  border-color: #334155;
+}
+
+.spec-row span {
+  font-size: 14px;
+}
+
+.spec-value {
+  font-weight: 700;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .project-inner {
+    padding: 32px 28px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .image-container img {
+    height: 360px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .project-inner {
+    padding: 22px 18px;
+  }
+
+  .title {
+    font-size: 26px;
+    margin-bottom: 28px;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  .image-container img {
+    height: 260px;
+  }
+
+  .thumb {
+    width: 66px;
+    height: 48px;
+  }
+
+  .spec-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
